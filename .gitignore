@@ -1,0 +1,22 @@
+# Node modules and build
+node_modules/
+.next/
+
+# Environment files
+.env
+.env.local
+
+# Ignore all secrets
+secrets/
+*.json
+
+
+# Secrets / service account keys
+secrets/
+serviceAccountKey.json
+*.json          # optional, agar sirf secrets ke liye use karna ho
+
+# System / logs
+.DS_Store
+npm-debug.log
+yarn-error.log
