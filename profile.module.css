@@ -1,0 +1,36 @@
+.backdrop{
+  position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:rgba(2,6,23,0.45); z-index:60;
+  padding:20px;
+}
+.modal{
+  width:100%; max-width:720px; background:#fff; border-radius:12px; box-shadow:0 20px 60px rgba(2,6,23,0.3); overflow:hidden;
+}
+.header{ display:flex; align-items:center; justify-content:space-between; padding:16px 20px; border-bottom:1px solid #f1f5f9; }
+.close{ background:transparent; border:none; font-size:18px; cursor:pointer; }
+.form{ padding:20px; display:flex; flex-direction:column; gap:12px; color:#0b1730; }
+.avatarRow{ display:flex; gap:16px; align-items:center; }
+.avatarWrap{ width:88px; height:88px; border-radius:12px; overflow:hidden; background:#f3f4f6; display:flex; align-items:center; justify-content:center; }
+.avatarWrap img{ width:100%; height:100%; object-fit:cover; display:block; }
+.avatarPlaceholder{ width:88px; height:88px; display:flex; align-items:center; justify-content:center; font-weight:700; color:#0b254a; background:linear-gradient(90deg,#eef2ff,#e6f6ff); border-radius:12px; }
+.fileLabel input{ display:none; }
+.small{ font-size:12px; color:#6b7280; margin-top:6px; }
+
+/* scoped to the local form class so CSS Modules stays pure */
+.form input,
+.form textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e6eef6;
+  font-size: 14px;
+}
+
+.actions{ display:flex; gap:10px; justify-content:flex-end; margin-top:8px; }
+.btnPrimary{ background:linear-gradient(90deg,#6d28d9,#0ea5b7); color:#fff; padding:10px 14px; border-radius:8px; border:none; cursor:pointer; }
+.btnAlt{ padding:10px 14px; border-radius:8px; border:1px solid #e6eef6; background:#fff; cursor:pointer; }
+.error{ color:#b91c1c; font-size:13px; }
+
+/* responsive */
+@media (max-width:700px){
+  .modal{ max-width: 95%; }
+  .avatarRow{ flex-direction:row; gap:12px; }
+}
